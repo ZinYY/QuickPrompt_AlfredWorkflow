@@ -3,6 +3,34 @@
 
 import json
 import sys
+import os
+from pathlib import Path
+
+# 定义缓存文件路径
+CACHE_FILE = os.path.expanduser('~/.cache/QuickPrompt.json')
+
+def load_cache():
+    """从缓存文件加载上次的搜索结果"""
+    try:
+        # 确保缓存目录存在
+        cache_dir = os.path.dirname(CACHE_FILE)
+        if not os.path.exists(cache_dir):
+            os.makedirs(cache_dir)
+            
+        if os.path.exists(CACHE_FILE):
+            with open(CACHE_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+    except Exception:
+        pass
+    return None
+
+def save_cache(items):
+    """保存搜索结果到缓存文件"""
+    try:
+        with open(CACHE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(items, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
 
 def get_items():
     """Return the list of all prompt items with separate search keys"""
@@ -98,8 +126,16 @@ def search_items(query):
     """Filter items based on search query"""
     items = get_items()
     
-    # If no query or empty query, return all items sorted by title
+    # 如果查询为空，尝试从缓存加载上次结果并将其放在最前面
     if not query or query == '':
+        cached_results = load_cache()
+        if cached_results:
+            # 创建一个集合存储缓存结果中的标题，用于快速查找
+            cached_titles = {item['title'] for item in cached_results}
+            # 获取不在缓存中的其他项目
+            other_items = [item for item in items if item['title'] not in cached_titles]
+            # 返回缓存结果和其他项目的组合
+            return cached_results + other_items
         return items
     
     # Convert query to lowercase for case-insensitive search
@@ -115,8 +151,14 @@ def search_items(query):
     # Sort by score in descending order
     scored_items.sort(key=lambda x: x[0], reverse=True)
     
-    # Return only the items, without scores
-    return [item for score, item in scored_items]
+    # 获取排序后的结果
+    filtered_items = [item for score, item in scored_items]
+    
+    # 如果查询不为空，保存结果到缓存
+    if query:
+        save_cache(filtered_items)
+    
+    return filtered_items
 
 def main():
     try:
