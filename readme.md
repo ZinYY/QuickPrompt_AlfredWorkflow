@@ -6,6 +6,8 @@ QuickPrompt is an Alfred workflow designed to enhance text input efficiency by p
 
 When working with large language models, users often need to input specific prompts to enhance the quality of model outputs. This workflow enables quick access to various preset scenarios through the hotkey `Command + /`, allowing you to efficiently input these prompts.
 
+![Example](figs/example.png)
+
 ## Features
 
 -   Global hotkey `Command + /` for instant access

@@ -4,6 +4,8 @@ QuickPrompt 是一个提高文本输入效率的 Alfred workflow，让你能够�
 
 在使用大模型时，我们经常需要输入一些特定的提示语 (prompts) 来提高模型的输出质量。该 workflow 旨在通过快捷键 `Command + /` 快速唤出，并支持多种预设场景，让你能够快速输入这些提示语。
 
+![Example](figs/example.png)
+
 ## 功能特点
 
 -   全局快捷键 `Command + /` 快速唤起
