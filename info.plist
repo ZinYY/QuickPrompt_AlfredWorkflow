@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>BD4EF4CC-DB4B-4397-937E-44BDB9ACEF09</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E5D2D2A9-9FB1-41A9-A11B-D89F90E595A0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E5D2D2A9-9FB1-41A9-A11B-D89F90E595A0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4D90AA80-A25C-4B65-A0E4-5103FFF20ED5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Yu-Yang Qian</string>
+	<key>description</key>
+	<string>Quick access to predefined prompts for efficient text input</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>QuickPrompt</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>1</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>1</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>Script Filter</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import json
+import sys
+
+def get_items():
+    """Return the list of all prompt items with separate search keys"""
+    return [
+        {
+            "title": "🔠⇨🔠 polish",
+            "subtitle": "英文学术写作润色",
+            "arg": "Below is a paragraph from an academic paper. Polish the writing to meet the academic style, improve the spelling, grammar, clarity, concision and overall readability. Only replace the word and rewrite the whole sentence when necessary. The writing should follow academic style and do not use words that are too fancy:\n\n",
+            "search_keys": ["polish"],
+            "icon": {
+                "type": "fileicon",
+                "path": "/System/Applications/TextEdit.app"
+            }
+        },
+
+        {
+            "title": "📚加入Bibtex",
+            "subtitle": "加入bibtex引用",
+            "arg": "按照上文已有的bibtex的格式，加入下面的citation。注意和上文已有的bibtex保持一样的缩写、格式等。尤其注意对arxiv文章的引用（应类似于@article{arxiv'22:adatask,\n  title   = {AdaTask: Adaptive Multitask Online Learning},\n  author  = {Laforgue, Pierre and Della Vecchia, Andrea and Cesa-Bianchi, Nicol{\`o} and Rosasco, Lorenzo},\n  journal = {ArXiv preprint},\n  volume  = {arXiv:2205.15802},\n  year    = {2021}\n}）：\n\n",
+            "search_keys": ["bibtex"],
+            "icon": {
+                "type": "fileicon",
+                "path": "/System/Applications/Notes.app"
+            }
+        },
+        {
+            "title": "🔠⇨🀄️ 英译中",
+            "subtitle": "学术翻译 英译中",
+            "arg": "你是一位科研论文审稿员，擅长写作高质量的科研论文，尤其是机器学习和人工智能领域的论文。\n请你帮我准确且学术性地将以下源文本翻译成流畅、易于阅读的中文，且将数学公式翻译为$符号包裹的LaTeX代码。在翻译专有术语时，请总是使用括号额外标注出该术语的原文。请直接输出翻译后的文本。\n\n源文本:",
+            "search_keys": ["yingyizhong"],
+            "icon": {
+                "type": "fileicon",
+                "path": "/System/Applications/Font Book.app"
+            }
+        },
+        {
+            "title": "🀄️⇨🔠 中译英",
+            "subtitle": "学术翻译 中译英",
+            "arg": "Please translate following sentence to English with academic writing, improve the spelling, grammar, clarity, concision and overall readability. When necessary, rewrite the whole sentence.\n\n",
+            "search_keys": ["zhongyiying"],
+            "icon": {
+                "type": "fileicon",
+                "path": "/System/Applications/Font Book.app"
+            }
+        },
+        {
+            "title": "🀄️⇨🀄️ 中文 polish",
+            "subtitle": "学术写作润色（详细修改说明）",
+            "arg": "作为一名中文学术论文写作改进助理，你的任务是改进所提供文本的拼写、语法、清晰、简洁和整体可读性，同时分解长句，减少重复，并提供改进建议。请只提供文本的更正版本，避免包括解释。请编辑以下文本：\n\n",
+            "search_keys": ["polishzhong"],
+            "icon": {
+                "type": "fileicon",
+                "path": "/System/Applications/TextEdit.app"
+            }
+        },
+        {
+            "title": "✍🏻 解释每步代码的作用",
+            "subtitle": "解释代码",
+            "arg": "I would like you to serve as a code interpreter with Chinese, and elucidate the syntax and the semantics of the code line-by-line:\n\n",
+            "search_keys": ["jieshi", "code", "python"]
+        }
+    ]
+
+def search_items(query):
+    """Filter items based on search query"""
+    items = get_items()
+    
+    # If no query or empty query, return all items sorted by title
+    if not query or query == '':
+        return items
+    
+    # Convert query to lowercase for case-insensitive search
+    query = query.lower().strip()
+    
+    # Filter items based on search_keys, title, and subtitle
+    filtered = []
+    for item in items:
+        # Check if query matches any search key
+        if any(query in key.lower() for key in item['search_keys']):
+            filtered.append(item)
+        # Check if query matches title or subtitle
+        elif query in item['title'].lower() or query in item['subtitle'].lower():
+            filtered.append(item)
+    
+    return filtered
+
+def main():
+    try:
+        # Get query from Alfred
+        query = sys.argv[1] if len(sys.argv) &gt; 1 else ""
+        
+        # Get filtered items
+        items = search_items(query)
+        
+        # Prepare output for Alfred
+        output = {"items": items}
+        
+        # Print JSON output
+        print(json.dumps(output, ensure_ascii=False))
+    except Exception as e:
+        # Error handling
+        error_output = {
+            "items": [{
+                "title": "Error occurred",
+                "subtitle": str(e),
+                "arg": ""
+            }]
+        }
+        print(json.dumps(error_output, ensure_ascii=False))
+
+if __name__ == "__main__":
+    main()</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>我想输入的prompt是...</string>
+				<key>type</key>
+				<integer>9</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E5D2D2A9-9FB1-41A9-A11B-D89F90E595A0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>44</integer>
+				<key>hotmod</key>
+				<integer>1048576</integer>
+				<key>hotstring</key>
+				<string>/</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>BD4EF4CC-DB4B-4397-937E-44BDB9ACEF09</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>use framework "Foundation"
+use framework "AppKit"
+
+on run {query}
+    # 获取 NSPasteboard
+    set pasteBoard to current application's NSPasteboard's generalPasteboard()
+    
+    # 保存原始剪贴板内容
+    set oldContent to pasteBoard's stringForType:(current application's NSPasteboardTypeString)
+    
+    # 清空剪贴板并设置新内容
+    pasteBoard's clearContents()
+    pasteBoard's setString:query forType:(current application's NSPasteboardTypeString)
+    
+    # 移动到段落开始，然后粘贴
+    tell application "System Events"
+        key code 126 using {command down}  # Command + 上箭头，移动到段落开始
+        key code 123 using {command down}  # Command + 左箭头，确保在行首
+        delay 0.02  # 小延迟确保光标已移动
+        keystroke "v" using command down
+    end tell
+    
+    # 延迟以确保粘贴完成
+    delay 0.04
+    
+    # 还原原始剪贴板内容
+    pasteBoard's clearContents()
+    if oldContent is not missing value then
+        pasteBoard's setString:oldContent forType:(current application's NSPasteboardTypeString)
+    end if
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4D90AA80-A25C-4B65-A0E4-5103FFF20ED5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>快速调用常用的提示语 (prompt)，通过全局快捷键 (Command + "/") 一键输入预设好的文本模板，提高工作效率。适用于翻译、文本润色、代码解释等多种场景，支持 Mac 系统全局调用。
+
+Instantly access and insert predefined prompts with a single hotkey (Command + "/"), streamlining your workflow. This global Mac utility enhances efficiency for various tasks including translation, text polishing, and code interpretation.</string>
+	<key>uidata</key>
+	<dict>
+		<key>4D90AA80-A25C-4B65-A0E4-5103FFF20ED5</key>
+		<dict>
+			<key>xpos</key>
+			<real>620</real>
+			<key>ypos</key>
+			<real>300</real>
+		</dict>
+		<key>BD4EF4CC-DB4B-4397-937E-44BDB9ACEF09</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>300</real>
+		</dict>
+		<key>E5D2D2A9-9FB1-41A9-A11B-D89F90E595A0</key>
+		<dict>
+			<key>xpos</key>
+			<real>460</real>
+			<key>ypos</key>
+			<real>300</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
