@@ -22,7 +22,7 @@ When working with large language models, users often need to input specific prom
 
 ## How to Use
 
-Download `QuickPrompt.alfredworkflow` and double-click to install.
+Download `QuickPrompt.alfredworkflow` from the [Release page](https://github.com/ZinYY/QuickPrompt_AlfredWorkflow/releases) and double-click to install.
 
 1. Press `Command + /` to invoke QuickPrompt
 2. Type keywords to search for desired prompts (supports both English and Chinese)

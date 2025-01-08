@@ -20,7 +20,7 @@ QuickPrompt 是一个提高文本输入效率的 Alfred workflow，让你能够�
 
 ## 使用方法
 
-下载 `QuickPrompt.alfredworkflow`，双击安装。
+从 [Release 页面](https://github.com/ZinYY/QuickPrompt_AlfredWorkflow/releases) 下载 `QuickPrompt.alfredworkflow` 并双击安装。
 
 1. 按下 `Command + /` 呼出 QuickPrompt
 2. 输入关键词搜索需要的提示语（支持中英文搜索）
