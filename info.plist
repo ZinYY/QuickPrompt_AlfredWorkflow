@@ -259,7 +259,7 @@ if __name__ == "__main__":
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>relatedAppsMode</key>
 				<integer>0</integer>
 			</dict>
@@ -357,7 +357,7 @@ Instantly access and insert predefined prompts with a single hotkey (Command + "
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
