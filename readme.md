@@ -16,9 +16,9 @@ When working with large language models, users often need to input specific prom
     -   🔠⇨🔠 Academic English Writing Polish
     -   📚 Bibtex Citation Format
     -   🔠⇨🀄️ English to Chinese Translation (Academic)
-    -   🀄️⇨🔠 Chinese to English Translation (Academic)
-    -   🀄️⇨🀄️ Chinese Academic Writing Polish
-    -   ✍🏻 Code Explanation (Line by Line)
+    -   ... ...
+
+-   Automatically cache the last search results
 
 -   After installation the workflow, you can customize prompts by modifying the `Workflows -> QuickPrompt -> Script Filter` in Alfred.
 
