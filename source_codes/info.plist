@@ -291,11 +291,11 @@ if __name__ == "__main__":
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>44</integer>
+				<integer>47</integer>
 				<key>hotmod</key>
 				<integer>1048576</integer>
 				<key>hotstring</key>
-				<string>/</string>
+				<string>.</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -332,10 +332,9 @@ on run {query}
     pasteBoard's clearContents()
     pasteBoard's setString:query forType:(current application's NSPasteboardTypeString)
     
-    # 移动到段落开始，然后粘贴
     tell application "System Events"
-        key code 126 using {command down}  # Command + 上箭头，移动到段落开始
-        key code 123 using {command down}  # Command + 左箭头，确保在行首
+        key code 0 using {command down}  # Command + A
+        key code 123  # 左箭头
         delay 0.02  # 小延迟确保光标已移动
         keystroke "v" using command down
     end tell
@@ -397,7 +396,7 @@ Instantly access and insert predefined prompts with a single hotkey (Command + "
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.5</string>
+	<string>1.0.6</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
