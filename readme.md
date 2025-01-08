@@ -20,9 +20,15 @@ When working with large language models, users often need to input specific prom
 
 -   After installation the workflow, you can customize prompts by modifying the `Workflows -> QuickPrompt -> Script Filter` in Alfred.
 
-## How to Use
+## Installation
 
 Download `QuickPrompt.alfredworkflow` from the [Release page](https://github.com/ZinYY/QuickPrompt_AlfredWorkflow/releases) and double-click to install.
+
+Open `Workflows -> QuickPrompt -> Hotkey`, set the hotkey (recommended `Command + /`)
+
+![Set Hotkey](figs/set_hotkey.png)
+
+## How to Use
 
 1. Press `Command + /` to invoke QuickPrompt
 2. Type keywords to search for desired prompts (supports both English and Chinese)

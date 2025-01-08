@@ -18,9 +18,15 @@ QuickPrompt 是一个提高文本输入效率的 Alfred workflow，让你能够�
 
 -   再安装 workflow 后，你可以在 Alfred 中通过修改 `Workflows -> QuickPrompt -> Script Filter` 来自定义 prompt。
 
-## 使用方法
+## 安装
 
 从 [Release 页面](https://github.com/ZinYY/QuickPrompt_AlfredWorkflow/releases) 下载 `QuickPrompt.alfredworkflow` 并双击安装。
+
+打开 `Workflows -> QuickPrompt -> Hotkey`, 设置快捷键 (推荐 `Command + /`)
+
+![设置快捷键](figs/set_hotkey.png)
+
+## 使用方法
 
 1. 按下 `Command + /` 呼出 QuickPrompt
 2. 输入关键词搜索需要的提示语（支持中英文搜索）
