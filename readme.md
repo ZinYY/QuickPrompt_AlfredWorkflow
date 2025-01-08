@@ -26,7 +26,7 @@ Download `QuickPrompt.alfredworkflow` and double-click to install.
 
 1. Press `Command + /` to invoke QuickPrompt
 2. Type keywords to search for desired prompts (supports both English and Chinese)
-3. Select the prompt, and it will be automatically inserted at the current cursor position
+3. Select the prompt, and it will be automatically inserted at the beginning of the text
 
 ## Search Tips
 
