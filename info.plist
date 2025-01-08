@@ -141,6 +141,34 @@ def get_items():
         }
     ]
 
+def calculate_relevance(item, query):
+    """计算项目与搜索词的相关度分数"""
+    score = 0
+    
+    # 检查搜索关键词
+    for key in item['search_keys']:
+        if query in key.lower():
+            # 如果搜索词在开头，给予更高分数
+            if key.lower().startswith(query):
+                score += 3
+            else:
+                score += 1
+                
+    # 检查标题和副标题
+    if query in item['title'].lower():
+        if item['title'].lower().startswith(query):
+            score += 2
+        else:
+            score += 1
+            
+    if query in item['subtitle'].lower():
+        if item['subtitle'].lower().startswith(query):
+            score += 2
+        else:
+            score += 1
+            
+    return score
+
 def search_items(query):
     """Filter items based on search query"""
     items = get_items()
@@ -152,17 +180,18 @@ def search_items(query):
     # Convert query to lowercase for case-insensitive search
     query = query.lower().strip()
     
-    # Filter items based on search_keys, title, and subtitle
-    filtered = []
+    # Filter and score items
+    scored_items = []
     for item in items:
-        # Check if query matches any search key
-        if any(query in key.lower() for key in item['search_keys']):
-            filtered.append(item)
-        # Check if query matches title or subtitle
-        elif query in item['title'].lower() or query in item['subtitle'].lower():
-            filtered.append(item)
+        score = calculate_relevance(item, query)
+        if score &gt; 0:
+            scored_items.append((score, item))
     
-    return filtered
+    # Sort by score in descending order
+    scored_items.sort(key=lambda x: x[0], reverse=True)
+    
+    # Return only the items, without scores
+    return [item for score, item in scored_items]
 
 def main():
     try:
@@ -328,7 +357,7 @@ Instantly access and insert predefined prompts with a single hotkey (Command + "
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.0.2</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
