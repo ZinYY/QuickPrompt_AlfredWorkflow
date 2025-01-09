@@ -1,4 +1,4 @@
-# QuickPrompt - Alfred Workflow
+# QuickPrompt - 帮助你快速输入 prompt 的 Alfred Workflow
 
 [English Readme](readme_en.md)
 
@@ -7,6 +7,28 @@ QuickPrompt 是一个提高文本输入效率的 Alfred workflow，让你能够�
 在使用大模型时，我们经常需要输入一些特定的提示语 (prompts) 来提高模型的输出质量。该 workflow 旨在通过快捷键 `Command + .` 快速唤出，并支持多种预设场景，让你能够快速输入这些提示语。
 
 ![Example](figs/example.png)
+
+## 重要提示
+
+本插件依赖于 MacOS 的 **Alfred** 软件。暂不支持 Windows 和 Linux 系统。
+
+**Alfred** 是一款强大的 Mac 效率工具，能让你通过快捷键和关键词快速执行各种操作。
+
+## 安装
+
+1. 你需要先安装 Alfred 才能使用本插件。访问 [Alfred 官网](https://www.alfredapp.com/) 下载并安装 Alfred (Workflow 的运行需要 Alfred 付费版本，请自行购买或寻找资源)。
+
+2. 从 [Release 页面](https://github.com/ZinYY/QuickPrompt_AlfredWorkflow/releases) 下载 `QuickPrompt.alfredworkflow` 并双击安装。
+
+3. 打开 `Workflows -> QuickPrompt -> Hotkey`, 设置快捷键 (推荐 `Command + .`)
+
+![设置快捷键](figs/set_hotkey.png)
+
+## 使用方法
+
+1. 按下 `Command + .` 呼出 QuickPrompt
+2. 输入关键词搜索需要的提示语（支持中英文搜索）
+3. 选择所需提示语，系统会自动将其插入到文本的开始位置
 
 ## 功能特点
 
@@ -21,20 +43,6 @@ QuickPrompt 是一个提高文本输入效率的 Alfred workflow，让你能够�
 -   自动缓存上一次的搜索结果
 
 -   在安装 workflow 后，你可以在 Alfred 中通过修改 `Workflows -> QuickPrompt -> Script Filter` 来自定义 prompt。
-
-## 安装
-
-从 [Release 页面](https://github.com/ZinYY/QuickPrompt_AlfredWorkflow/releases) 下载 `QuickPrompt.alfredworkflow` 并双击安装。
-
-打开 `Workflows -> QuickPrompt -> Hotkey`, 设置快捷键 (推荐 `Command + .`)
-
-![设置快捷键](figs/set_hotkey.png)
-
-## 使用方法
-
-1. 按下 `Command + .` 呼出 QuickPrompt
-2. 输入关键词搜索需要的提示语（支持中英文搜索）
-3. 选择所需提示语，系统会自动将其插入到文本的开始位置
 
 ## 搜索提示
 

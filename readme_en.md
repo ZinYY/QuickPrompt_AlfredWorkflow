@@ -1,4 +1,4 @@
-# QuickPrompt - Alfred Workflow
+# QuickPrompt: An Alfred Workflow for Efficient Prompt Management and Input
 
 [中文说明](readme.md)
 
@@ -8,25 +8,19 @@ When working with large language models, users often need to input specific prom
 
 ![Example](figs/example.png)
 
-## Features
+## Important Note
 
-- Global hotkey `Command + .` for instant access
-- Multiple preset scenarios:
+This plugin requires **Alfred** software on MacOS. Windows and Linux systems are currently not supported.
 
-    - 🔠⇨🔠 Academic English Writing Polish
-    - 📚 Bibtex Citation Format
-    - 🔠⇨🀄️ English to Chinese Translation (Academic)
-    - ... ...
-
-- Automatically cache the last search results
-
-- After installation the workflow, you can customize prompts by modifying the `Workflows -> QuickPrompt -> Script Filter` in Alfred.
+**Alfred** is a powerful Mac productivity tool that enables quick execution of various operations through hotkeys and keywords.
 
 ## Installation
 
-Download `QuickPrompt.alfredworkflow` from the [Release page](https://github.com/ZinYY/QuickPrompt_AlfredWorkflow/releases) and double-click to install.
+1. You need to install **Alfred** before using this plugin. Visit the [Alfred website](https://www.alfredapp.com/) to download and install Alfred (Workflows require Powerpack version).
 
-Open `Workflows -> QuickPrompt -> Hotkey`, set the hotkey (recommended `Command + .`)
+2. Download `QuickPrompt.alfredworkflow` from the [Release page](https://github.com/ZinYY/QuickPrompt_AlfredWorkflow/releases) and double-click to install.
+
+3. Open `Workflows -> QuickPrompt -> Hotkey`, set the hotkey (recommended `Command + .`)
 
 ![Set Hotkey](figs/set_hotkey.png)
 
@@ -36,13 +30,27 @@ Open `Workflows -> QuickPrompt -> Hotkey`, set the hotkey (recommended `Command 
 2. Type keywords to search for desired prompts (supports both English and Chinese)
 3. Select the prompt, and it will be automatically inserted at the beginning of the text
 
+## Features
+
+-   Global hotkey `Command + .` for instant access
+-   Multiple preset scenarios:
+
+    -   🔠⇨🔠 Academic English Writing Polish
+    -   📚 Bibtex Citation Format
+    -   🔠⇨🀄️ English to Chinese Translation (Academic)
+    -   ... ...
+
+-   Automatically cache the last search results
+
+-   After installation the workflow, you can customize prompts by modifying the `Workflows -> QuickPrompt -> Script Filter` in Alfred.
+
 ## Search Tips
 
-- Supports both English and Pinyin search:
-    - "polish" - for writing polish prompts
-    - "bibtex" - for citation format prompts
-    - "translate" or "fanyi" - for translation prompts
-    - "code" - for code explanation prompts
+-   Supports both English and Pinyin search:
+    -   "polish" - for writing polish prompts
+    -   "bibtex" - for citation format prompts
+    -   "translate" or "fanyi" - for translation prompts
+    -   "code" - for code explanation prompts
 
 ## Author
 
