@@ -48,6 +48,8 @@ Open `Workflows -> QuickPrompt -> Hotkey`, set the hotkey (recommended `Command 
 
 Created by Yu-Yang Qian
 
-## Version
+## Sponsor
 
-Current Version: 1.0.0
+If you find this Alfred workflow useful, please consider supporting the author with a coffee:
+
+![sponsor](figs/pic_receive.jpg)

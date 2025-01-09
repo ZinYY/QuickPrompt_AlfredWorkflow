@@ -46,6 +46,8 @@ QuickPrompt 是一个提高文本输入效率的 Alfred workflow，让你能够�
 
 Created by Yu-Yang Qian
 
-## 版本
+## 赞助:
 
-当前版本：1.0.0
+如果你觉得脚本好用，可以请作者喝一杯咖啡：
+
+![sponsor](figs/pic_receive.jpg)
