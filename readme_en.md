@@ -49,7 +49,6 @@ This plugin requires **Alfred** software on MacOS. Windows and Linux systems are
 -   Supports both English and Pinyin search:
     -   "polish" - for writing polish prompts
     -   "bibtex" - for citation format prompts
-    -   "translate" or "fanyi" - for translation prompts
     -   "code" - for code explanation prompts
 
 ## Author

@@ -49,7 +49,7 @@ QuickPrompt 是一个提高文本输入效率的 Alfred workflow，让你能够�
 -   可使用拼音或英文搜索，如：
     -   "polish" - 查找润色相关提示语
     -   "bibtex" - 查找引用格式提示语
-    -   "翻译" 或 "fanyi" - 查找翻译相关提示语
+    -   "zhongyiying" - 查找中译英相关提示语
     -   "代码" 或 "code" - 查找代码解释提示语
 
 ## 作者
