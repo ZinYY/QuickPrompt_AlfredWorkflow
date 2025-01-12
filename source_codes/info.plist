@@ -59,7 +59,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>Script Filter</string>
+				<string>gpt</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -164,7 +164,14 @@ def get_items():
             "subtitle": "解释代码",
             "arg": "I would like you to serve as a code interpreter with Chinese, and elucidate the syntax and the semantics of the code line-by-line:\n\n",
             "search_keys": ["jieshi", "code", "python"]
-        }
+        },
+
+        {
+            "title": "✏️ 学术缩写",
+            "subtitle": "学术缩写",
+            "arg": "在不改变该段落原意的情况下进行缩写，尽可能使得段落缩短1/3（保持严谨、具有学术性的英文）",
+            "search_keys": ["suoxie", "short"]
+        },
     ]
 
 def calculate_relevance(item, query):
@@ -396,7 +403,7 @@ Instantly access and insert predefined prompts with a single hotkey (Command + "
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.6</string>
+	<string>1.0.7</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>

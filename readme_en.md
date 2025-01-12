@@ -26,7 +26,7 @@ This plugin requires **Alfred** software on MacOS. Windows and Linux systems are
 
 ## How to Use
 
-1. Press `Command + .` to invoke QuickPrompt
+1. Press `Command + .` to invoke QuickPrompt (or type "gpt" in Alfred search box)
 2. Type keywords to search for desired prompts (supports both English and Chinese)
 3. Select the prompt, and it will be automatically inserted at the beginning of the text
 

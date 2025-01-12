@@ -26,7 +26,7 @@ QuickPrompt 是一个提高文本输入效率的 Alfred workflow，让你能够�
 
 ## 使用方法
 
-1. 按下 `Command + .` 呼出 QuickPrompt
+1. 按下 `Command + .` 呼出 QuickPrompt (或者在 Alfred 搜索框中输入 "gpt")
 2. 输入关键词搜索需要的提示语（支持中英文搜索）
 3. 选择所需提示语，系统会自动将其插入到文本的开始位置
 
